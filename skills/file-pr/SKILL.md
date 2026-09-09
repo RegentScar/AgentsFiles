@@ -16,8 +16,6 @@ BAD:
 GOOD:
 > perf(server): reduce websocket traffic with compression
 
-Include numerical improvements only when supported by measurements.
-
 Open the description with the actual problem, then briefly explain the final solution. Keep it aligned with the final diff as scope changes. Do not lead with an implementation inventory:
 
 BAD:
@@ -26,4 +24,15 @@ BAD:
 GOOD:
 > Starting a thread from an existing worktree ignored the configured worktree preference. New threads now respect that preference.
 
+Include numerical improvements only when supported by measurements.
+
+End the PR description with the actual model and harness used, following this format:
+
+```
+Model: GPT-6 Astra
+Harness: Codex Desktop
+```
+
 Open a real PR rather than a draft so review bots run.
+
+Merge only per the disposition given in the request (merge when green, or stop and report). If none was given, report and ask.
