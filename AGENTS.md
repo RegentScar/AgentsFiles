@@ -1,7 +1,7 @@
 # Coding preferences - general
 
 - Keep things simple. Channel "YAGNI" energy unless told otherwise.
-- Write code, comments, and documentation in English.
+- Write code, comments, documentation, commit, and pull request messages in English.
 - Type safety is useful; take advantage of it.
 - Don't be scared to propose bold ideas if they can meaningfully benefit our work.
 - Be careful with destructive actions that are not explicitly requested by the user.
@@ -27,13 +27,3 @@
 # Blast radius
 
 - Do not modify production, live databases, or daily-driver build/preview channels unless explicitly told to. Before accessing any of them, name the target and intended action.
-
-# Pull requests
-
-- Make sure titles follow conventions from the repo. They should be simple and easy to understand. Use conventional commit styles in projects that use them, i.e., "fix(web): new threads no longer spike CPU".
-- Keep PR descriptions concise. Describe the actual problem and final solution.
-- Add a blurb to the end of the PR description about what model and harness is making the changes.
-- **Open a real PR**, not a draft. Drafts do not get review-bot coverage.
-- **Rebase onto the latest PR target branch before opening.** Use the repository's default branch unless the task specifies another target.
-- When asked to monitor a PR: poll current checks and review feedback since the previous poll, and recheck unresolved findings against the latest code. Verify bot findings before acting; fix real issues and dismiss false positives with a written reason. Fix CI failures, distinguishing real breaks from known infra flakes. If nothing is new, stay quiet; do not post filler comments. Stop when required CI and the repo's review bots pass on the latest commit and no actionable findings remain.
-- Merge only per the disposition given in the request (merge when green, or stop and report). If none was given, report and ask.
