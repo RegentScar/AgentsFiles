@@ -28,8 +28,7 @@ Include numerical improvements only when supported by measurements.
 
 End the PR description with the actual model and harness used, following this format:
 
-Model: GPT-6 Astra
-Harness: Codex Desktop
+**Model:** GPT-6 Astra **Harness:** Codex Desktop
 
 Open a real PR rather than a draft so review bots run.
 
