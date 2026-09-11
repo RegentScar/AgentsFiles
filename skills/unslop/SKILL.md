@@ -7,7 +7,7 @@ description: Cut AI tells from writing. Always use.
 
 Edit text to remove AI patterns and add human voice.
 
-Apply only to responses, comments, and UI text.
+Apply broadly across all natural-language text, including responses, comments, and UI text.
 Preserve exact quotations and technical syntax.
 
 ## Process
