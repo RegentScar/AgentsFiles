@@ -19,11 +19,6 @@
 - Do not spawn subagents or a multi-agent panel for work a single agent finishes in one pass. Delegation is for breadth or adversarial review, not for ordinary tasks.
 - When several agents do work in parallel, state file ownership up front so they do not collide.
 
-# Visual and design work
-
-- Standing constraints: dark mode, true black (`#000`) background, white primary text. Information-dense, no decorative card/pill chrome, no light-gray subtitle lines above sections. Minimal copy. No em dashes.
-- Avoid continuously repainting CSS animations (pulse, shimmer, blur, spinners); they peg the GPU on high-refresh displays.
-
 # Blast radius
 
 - Do not modify production, live databases, or daily-driver build/preview channels unless explicitly told to. Before accessing any of them, name the target and intended action.
