@@ -6,7 +6,7 @@
 - Don't be scared to propose bold ideas if they can meaningfully benefit our work.
 - Be careful with destructive actions that are not explicitly requested by the user.
 - Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc., are much less good. Tests should be focused.
-- Comments are a great way to clarify functionality and how code is used. Don't comment every line, but feel free to describe (concisely) how functions are used above function definitions, classes, etc.
+- Comments are a great way to clarify functionality and why this code exists. Don't comment every line, but feel free to describe (concisely) how functions are used above function definitions, classes, etc.
 - Keep comments up to date! When making changes, it's important to keep things in sync.
 
 # Coding preferences - TypeScript
