@@ -1,13 +1,15 @@
 ---
 name: file-pr
-description: File a concise pull request. Use when the user asks to file, open, or create a PR.
+description: File a concise pull request (GitHub) or merge request (GitLab). Use when the user asks to file, open, or create a PR or MR.
 ---
 
-# File PR
+# File PR / MR
 
-Before filing, check whether a PR for this branch already exists; update it instead of opening a duplicate. Fetch and rebase onto the latest PR target branch, using the repository's default branch unless the task specifies another target. Review the diff against that branch to make sure its contents match the goal.
+"PR" and "MR" mean the same thing here. Pick the tool from the `origin` remote: GitHub → `gh pr …`; GitLab → `glab mr …`.
 
-PR titles usually become commit messages, so follow the repository's title conventions. Look at recently merged PRs and Git history for examples.
+Before filing, check whether a PR/MR for this branch already exists (`gh pr list --head <branch>` / `glab mr list --source-branch <branch>`); update it instead of opening a duplicate. Fetch and rebase onto the latest target branch, using the repository's default branch unless the task specifies another target. Review the diff against that branch to make sure its contents match the goal.
+
+PR/MR titles usually become commit messages, so follow the repository's title conventions. Look at recently merged PRs/MRs and Git history for examples.
 Prefer a concise, human-readable title that explains why the change matters:
 
 BAD:
@@ -26,10 +28,6 @@ GOOD:
 
 Include numerical improvements only when supported by measurements.
 
-End the PR description with the actual model and harness used, following this format:
+Open a real PR/MR rather than a draft so review bots and pipelines run. On GitLab, pass `--remove-source-branch` unless the repository says otherwise.
 
-**Model:** GPT-6 Astra **Harness:** Codex Desktop
-
-Open a real PR rather than a draft so review bots run.
-
-Merge only per the disposition given in the request (merge when green, or stop and report). If none was given, report and ask.
+Merge only per the disposition given in the request (merge when green, or stop and report). If none was given, report and ask. On GitLab, check the pipeline with `glab ci status` / `glab mr view`, and remember that `glab mr merge` enables auto-merge by default: pass `--auto-merge=false` unless auto-merge was asked for, since a merge may deploy.
