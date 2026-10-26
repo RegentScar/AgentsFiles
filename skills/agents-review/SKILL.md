@@ -15,4 +15,4 @@ Spawn an independent subagent (Agent tool, `general-purpose`) to review all chan
    - Run the relevant tests, build, or lint if available.
    - Do not modify any files.
    - Report only real issues, each with `file:line`, what is wrong, a concrete failure scenario, and severity. Say clearly if nothing was found.
-4. **Verify:** Check each reported finding yourself and drop false positives. Present the confirmed findings to the user, most severe first.
+4. **Fix:** Check each reported finding yourself and drop false positives. Fix the confirmed findings that are worth fixing. Stay within the scope of the original change: no refactors, cleanups, or unrelated improvements. Briefly report what you fixed and which findings you left and why.
